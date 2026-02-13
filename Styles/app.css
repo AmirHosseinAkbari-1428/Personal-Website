@@ -5,11 +5,11 @@
      --light-blue: #0CBFAE;
      --link-button-blue: #09BEAD;
      --white: #FFFFFF;
-     --first-font: "Poppins";
-     --second-font: "Poppins Medium";
-     --third-font: "Poppins Bold";
-     --forth-font: "Poppins Black";
-     --fith-font: "Poppins semiBold";
+     --regular-font: "Poppins";
+     --medium-font: "Poppins Medium";
+     --bold-font: "Poppins Bold";
+     --black-font: "Poppins Black";
+     --semiBold-font: "Poppins semiBold";
  }
 
 
@@ -32,6 +32,9 @@
      align-items: center;
      border-radius: 10rem;
      cursor: pointer;
+     text-decoration: none;
+     color: var(--white);
+     font-family: var(--semiBold-font);
  }
 
  .section-head {
@@ -40,28 +43,44 @@
      justify-content: center;
      align-items: center;
      color: var(--text-color);
+     margin-bottom: 8rem;
  }
 
  .section__title {
      font-size: 5rem;
-     font-family: var(--third-font);
+     font-family: var(--bold-font);
      margin: 0;
  }
 
  .section__caption {
      font-size: 1.5rem;
-     font-family: var(--first-font);
+     font-family: var(--regular-font);
      letter-spacing: 0.3rem;
      margin: 0;
  }
 
  .section__line {
-    background-color: var(--text-color);
-    width: 100%;
-    height: 0.3rem;
+     background-color: var(--text-color);
+     width: 25rem;
+     height: 0.2rem;
+     margin-top: 3rem;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .section__line::after {
+     position: absolute;
+     content: "";
+     width: 3.5rem;
+     height: 1rem;
+     border-radius: 3rem;
+     background-color: var(--text-color);
  }
 
  /* ////////////////////////////////////code */
+
  .align-items-center {
      align-items: center;
  }
@@ -96,7 +115,7 @@
 
  .nav__logo {
      color: var(--text-color);
-     font-family: var(--forth-font);
+     font-family: var(--black-font);
      font-size: 6rem;
  }
 
@@ -119,7 +138,7 @@
      color: var(--text-color2);
      text-decoration: none;
      font-size: 1.6rem;
-     font-family: var(--second-font);
+     font-family: var(--medium-font);
  }
 
  .nav__toggle-icon {
@@ -182,7 +201,7 @@
  }
 
  .Home__intro {
-     font-family: var(--fith-font);
+     font-family: var(--semiBold-font);
      color: #0CBFAE;
      font-size: 3rem;
      margin: 0;
@@ -193,14 +212,14 @@
  }
 
  .Home__title {
-     font-family: var(--third-font);
+     font-family: var(--bold-font);
      font-size: 5rem;
      color: #0ABEAD;
      margin: 1rem 0 0 0;
  }
 
  .Home__caption {
-     font-family: var(--first-font);
+     font-family: var(--regular-font);
      color: var(--text-color2);
      opacity: 0.7;
  }
@@ -214,7 +233,7 @@
  .Home__link {
      text-decoration: none;
      color: var(--white);
-     font-family: var(--fith-font);
+     font-family: var(--semiBold-font);
  }
 
  .Home__photo {
@@ -227,4 +246,147 @@
      border: 2rem solid #ffffff;
      border-radius: 100%;
      box-shadow: 0 0 4rem rgba(96, 233, 255, 0.27);
+ }
+
+ .AboutUs {
+     margin-top: 10rem;
+ }
+
+ .AboutUs__wrapper {
+     display: flex;
+     box-shadow: 0 0 4rem rgba(96, 233, 255, 0.27);
+ }
+
+ .AboutUs__wrapper__left {
+     flex-basis: 48%;
+ }
+
+ .AboutUs__wrapper__right {
+     flex-basis: 52%;
+     padding: 5rem 4rem;
+ }
+
+ .AboutUs__img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .AboutUs__title {
+     font-family: var(--semiBold-font);
+     color: #333333;
+     margin: 0;
+     font-size: 2.5rem;
+ }
+
+ .AboutUs__caption {
+     font-family: var(--regular-font);
+     color: #333333;
+     margin-bottom: 8rem;
+ }
+
+ .AboutUs__info {}
+
+ .AboutUs__info__sctipt {
+     font-family: var(--semiBold-font);
+     color: var(--text-color);
+     font-size: 1.8rem;
+ }
+
+ .AboutUs__opt {
+     margin: 0;
+     padding-left: 1rem;
+ }
+
+ .AbouUs__opt__item {
+     list-style: none;
+     position: relative;
+     padding-left: 3.5rem;
+     font-family: var(--regular-font);
+     color: #333333;
+     margin-bottom: 1rem;
+ }
+
+ .AbouUs__opt__item:last-child {
+     margin-bottom: 0;
+ }
+
+ .AbouUs__opt__item::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     width: 1.5rem;
+     height: 1.5rem;
+     border-radius: 100%;
+     background-color: var(--orange);
+ }
+
+ .AboutUs__links {
+     margin-top: 4rem;
+     display: flex;
+     gap: 3rem;
+     width: 100%;
+ }
+
+ .AboutUs__link {}
+
+ .services {
+     margin-top: 10rem;
+ }
+
+ .service {
+     text-align: center;
+     background-color: #0CBFAE;
+     padding: 6rem 3rem;
+     position: relative;
+     z-index: 1;
+     height: 100%;
+ }
+
+ .service__shape {
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     z-index: -1;
+ }
+
+ .service__icon {}
+
+ .service__title {
+     font-family: var(--bold-font);
+     color: var(--white);
+ }
+
+ .service__caption {
+     font-family: var(--regular-font);
+     font-size: 1.5rem;
+     color: var(--white);
+ }
+
+ .service__purple {
+     background-color: #8540FF;
+ }
+
+ .service__yellow {
+     background-color: #FFC50C;
+ }
+
+ .service__pink {
+     background-color: #EC407A;
+ }
+
+ .service__orange {
+     background-color: #FF6331;
+ }
+
+ .service__blue {
+     background-color: #13B6FF;
+ }
+
+ .service__green {
+     background-color: #49AF46;
  }

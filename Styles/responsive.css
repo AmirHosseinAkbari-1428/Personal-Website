@@ -71,6 +71,14 @@
     .Home {
         background-image: none;
     }
+
+    .AboutUs__wrapper {
+        flex-direction: column;
+    }
+
+    .AboutUs__links {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -141,5 +149,13 @@
     .Home__photo {
         width: 34rem;
         height: 34rem;
+    }
+
+    .AboutUs__links {
+        flex-wrap: wrap;
+    }
+
+    .AboutUs__link {
+        flex-grow: 1;
     }
 }
